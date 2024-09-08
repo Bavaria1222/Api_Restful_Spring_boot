@@ -38,11 +38,9 @@ public class PersonaController {
     }
 
     @GetMapping({"/persona/{id}"})
-    ResponseEntity<Persona> getPersona(@PathVariable("id") Long id) {
+    ResponseEntity getPersona(@PathVariable("id") Long id) {
         Optional<Persona> optional = this.personaRepository.findById(id);
-        return (ResponseEntity)optional.map((persona) -> {
-            return ResponseEntity.ok(persona);
-        }).orElseGet(() -> {
+        return optional.map(ResponseEntity::ok).orElseGet(() -> {
             return ResponseEntity.notFound().build();
         });
     }
