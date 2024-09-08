@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest           # Usa la misma imagen que ya estás utilizando
+    container_name: paradigmas     # El nombre del contenedor
+    environment:
+      MYSQL_ROOT_PASSWORD: root    # La contraseña para el usuario root de MySQL
+      MYSQL_DATABASE: paradigmas   # El nombre de la base de datos que quieres crear
+    ports:
+      - "3306:3306"                # Mapea el puerto 3306 de MySQL a la máquina local
+    volumes:
+      - db-data:/var/lib/mysql     # Crea un volumen para persistir los datos de la base de datos
+      - ./backup.sql:/docker-entrypoint-initdb.d/backup.sql  # Cargar el volcado SQL
+    networks:
+      - backend                    # Define una red para que los contenedores se puedan comunicar (opcional)
+
+volumes:
+  db-data:                         # Define el volumen para la base de datos
+
+networks:
+  backend:
+    driver: bridge                 # Define una red bridge para la comunicación entre servicios (opcional)
