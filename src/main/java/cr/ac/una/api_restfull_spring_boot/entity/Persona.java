@@ -21,6 +21,6 @@ public class Persona {
     @Id
     private Long id;
     private String nombre;
-    private int edad;
+    private Integer edad;
 
 }

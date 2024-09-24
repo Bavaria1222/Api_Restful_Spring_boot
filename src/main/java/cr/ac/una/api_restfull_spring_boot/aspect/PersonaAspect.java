@@ -1,16 +1,13 @@
 package cr.ac.una.api_restfull_spring_boot.aspect;
 
-import cr.ac.una.api_restfull_spring_boot.entity.Log;
-import cr.ac.una.api_restfull_spring_boot.repository.LogRepository;
 import jakarta.servlet.http.HttpServletRequest;
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
-import java.time.LocalDateTime;
 import java.util.logging.Logger;
 
 @Aspect
@@ -18,66 +15,30 @@ import java.util.logging.Logger;
 public class PersonaAspect {
 
     private static final Logger logger = Logger.getLogger(PersonaAspect.class.getName());
-    private final LogRepository logRepository;
-    @Autowired
-    private HttpServletRequest request; // Inyectar HttpServletRequest para obtener el nombre del enpoint
 
-    public PersonaAspect(LogRepository logRepository) {
-        this.logRepository = logRepository;
+    @Before("execution(* cr.ac.una.api_restfull_spring_boot.controller.PersonaController.*(..))")
+    public void logAfterGetName(JoinPoint joinPoint) {
+        logger.info("Enpoint_ejecutado: " + joinPoint.getSignature().getName());
     }
 
-    //Interceptar todos los metodos de la clase PersonaController que devuelven ResponseEntity
     @Around("execution(* cr.ac.una.api_restfull_spring_boot.controller.PersonaController.*(..))")
-    public Object logPersona (ProceedingJoinPoint joinPoint) throws Throwable {
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint) throws Throwable {
+        // Obtener el tiempo inicial en milisegundos
+        long start = System.currentTimeMillis();
 
-        // Capturar el tiempo de inicio
-        long startTime = System.currentTimeMillis();
+        // Obtener el método HTTP actual
+        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        String metodoHTTP = request.getMethod();  // Obtener el método HTTP (GET, POST, PUT, DELETE)
 
-        // Ejecutar el metodo original del controlador
-        Object result = joinPoint.proceed();
+        // Ejecutar el método original
+        Object proceed = joinPoint.proceed();
 
-        // Capturar el tiempo de fin
-        long endTime = System.currentTimeMillis();
+        // Calcular el tiempo de ejecución
+        long executionTime = System.currentTimeMillis() - start;
 
-        // Calcular el tiempo de respuesta en milisegundos
-        long responseTime = endTime - startTime;
+        // Registrar el método HTTP, el endpoint y el tiempo de ejecución en los logs
+        logger.info("Enpoint_ejecutado: " + joinPoint.getSignature().getName() + " - Método HTTP: " + metodoHTTP + " - Tiempo de ejecución: " + executionTime + " ms");
 
-
-        //Verifica si la respuesta es una instancia de Response Entity
-        if(result instanceof ResponseEntity){
-            ResponseEntity<?> responseEntity = (ResponseEntity<?>) result;
-
-            // Crear un nuevo log
-            Log log = new Log();
-
-           //1. Obtener el nombre del enpoint ejecutado
-
-            log.setEndpointName(joinPoint.getSignature().getName());
-
-           //2. Obtener el metodo HTTP (GET, POST, etc.)
-            log.setHttpMethod(request.getMethod());
-
-           //3.Obtenener la respueta HTTP
-//            log.setHttpCode(responseEntity.getStatusCodeValue());
-            int httpResponse = responseEntity.getStatusCodeValue();
-            log.setHttpCode(httpResponse);
-
-
-            //4. Obtener el detalle del código de respuesta (por ejemplo, BAD_REQUEST)
-            HttpStatus status = HttpStatus.valueOf(httpResponse);
-            log.setHttpStatusCode(status.getReasonPhrase());
-
-            // 5. Guardar el tiempo de respuesta en milisegundos
-            log.setResponseTime(responseTime);
-
-            //6 timestamp
-            log.setTimestamp(LocalDateTime.now());
-
-            //Guardar el log en la base de datos
-            logRepository.save(log);
-
-        }
-        return result;
+        return proceed;
     }
-
 }
