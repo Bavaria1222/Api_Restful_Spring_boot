@@ -36,7 +36,7 @@
 2024-09-23T18:20:26.149-06:00 DEBUG 6096 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:20:26.219-06:00 DEBUG 6096 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:20:26.292-06:00  INFO 6096 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:20:26.302-06:00 DEBUG 6096 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:20:26.302-06:00 DEBUG 6096 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -1777,7 +1777,7 @@ java.lang.RuntimeException: Error interno al actualizar
 2024-09-23T18:21:31.938-06:00 DEBUG 17012 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:21:32.009-06:00 DEBUG 17012 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:21:32.078-06:00  INFO 17012 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:21:32.088-06:00 DEBUG 17012 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:21:32.088-06:00 DEBUG 17012 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -3437,7 +3437,7 @@ java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
 2024-09-23T18:26:05.843-06:00 DEBUG 24224 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:26:05.915-06:00 DEBUG 24224 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:26:06.004-06:00  INFO 24224 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:26:06.015-06:00 DEBUG 24224 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:26:06.015-06:00 DEBUG 24224 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -4869,7 +4869,7 @@ Unconditional classes:
 2024-09-23T18:31:11.275-06:00 DEBUG 24052 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:31:11.462-06:00 DEBUG 24052 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:31:11.546-06:00  INFO 24052 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:31:11.557-06:00 DEBUG 24052 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:31:11.557-06:00 DEBUG 24052 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -6284,7 +6284,7 @@ Unconditional classes:
 2024-09-23T18:31:17.608-06:00 DEBUG 9636 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:31:17.677-06:00 DEBUG 9636 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:31:17.751-06:00  INFO 9636 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:31:17.761-06:00 DEBUG 9636 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:31:17.761-06:00 DEBUG 9636 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -7718,7 +7718,7 @@ Unconditional classes:
 2024-09-23T18:33:10.217-06:00 DEBUG 18248 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:33:10.285-06:00 DEBUG 18248 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:33:10.357-06:00  INFO 18248 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:33:10.366-06:00 DEBUG 18248 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:33:10.366-06:00 DEBUG 18248 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -9147,7 +9147,7 @@ Unconditional classes:
 2024-09-23T18:33:33.385-06:00 DEBUG 8288 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:33:33.494-06:00 DEBUG 8288 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:33:33.604-06:00  INFO 8288 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:33:33.618-06:00 DEBUG 8288 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:33:33.618-06:00 DEBUG 8288 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -10562,7 +10562,7 @@ Unconditional classes:
 2024-09-23T18:33:41.847-06:00 DEBUG 13684 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:33:41.919-06:00 DEBUG 13684 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:33:41.995-06:00  INFO 13684 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:33:42.006-06:00 DEBUG 13684 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:33:42.006-06:00 DEBUG 13684 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -12008,7 +12008,7 @@ Unconditional classes:
 2024-09-23T18:41:18.670-06:00 DEBUG 25488 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:41:18.769-06:00 DEBUG 25488 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:41:18.863-06:00  INFO 25488 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:41:18.877-06:00 DEBUG 25488 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:41:18.877-06:00 DEBUG 25488 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -13465,7 +13465,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
 2024-09-23T18:41:28.368-06:00  INFO 22468 --- [Api_Restfull_Spring_boot] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-09-23T18:41:28.381-06:00 DEBUG 22468 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:41:28.381-06:00 DEBUG 22468 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -15020,7 +15020,7 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
 2024-09-23T18:41:35.805-06:00  INFO 25252 --- [Api_Restfull_Spring_boot] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2024-09-23T18:41:35.819-06:00 DEBUG 25252 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:41:35.819-06:00 DEBUG 25252 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -16533,7 +16533,7 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 2024-09-23T18:41:48.640-06:00 DEBUG 23772 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:41:48.711-06:00 DEBUG 23772 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:41:48.783-06:00  INFO 23772 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:41:48.793-06:00 DEBUG 23772 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:41:48.793-06:00 DEBUG 23772 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -18186,7 +18186,7 @@ java.lang.RuntimeException: Error interno al actualizar
 2024-09-23T18:45:17.442-06:00 DEBUG 11512 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:45:17.512-06:00 DEBUG 11512 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:45:17.582-06:00  INFO 11512 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:45:17.591-06:00 DEBUG 11512 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:45:17.591-06:00 DEBUG 11512 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -19601,7 +19601,7 @@ Unconditional classes:
 2024-09-23T18:45:32.023-06:00 DEBUG 12476 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:45:32.097-06:00 DEBUG 12476 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:45:32.176-06:00  INFO 12476 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:45:32.187-06:00 DEBUG 12476 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:45:32.187-06:00 DEBUG 12476 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -21016,7 +21016,7 @@ Unconditional classes:
 2024-09-23T18:45:37.926-06:00 DEBUG 23528 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:45:37.993-06:00 DEBUG 23528 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:45:38.066-06:00  INFO 23528 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:45:38.076-06:00 DEBUG 23528 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:45:38.076-06:00 DEBUG 23528 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -22517,7 +22517,7 @@ java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
 2024-09-23T18:47:30.745-06:00 DEBUG 23044 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:47:30.812-06:00 DEBUG 23044 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:47:30.883-06:00  INFO 23044 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:47:30.893-06:00 DEBUG 23044 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:47:30.893-06:00 DEBUG 23044 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -23981,7 +23981,7 @@ Unconditional classes:
 2024-09-23T18:49:36.922-06:00 DEBUG 8136 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:49:36.992-06:00 DEBUG 8136 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:49:37.067-06:00  INFO 8136 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:49:37.076-06:00 DEBUG 8136 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:49:37.076-06:00 DEBUG 8136 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -25415,7 +25415,7 @@ Unconditional classes:
 2024-09-23T18:50:37.287-06:00 DEBUG 15284 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:50:37.353-06:00 DEBUG 15284 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:50:37.428-06:00  INFO 15284 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:50:37.438-06:00 DEBUG 15284 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:50:37.438-06:00 DEBUG 15284 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -26854,7 +26854,7 @@ Unconditional classes:
 2024-09-23T18:52:48.982-06:00 DEBUG 13460 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:52:49.050-06:00 DEBUG 13460 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:52:49.122-06:00  INFO 13460 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:52:49.132-06:00 DEBUG 13460 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:52:49.132-06:00 DEBUG 13460 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -28305,7 +28305,7 @@ Unconditional classes:
 2024-09-23T18:55:28.661-06:00 DEBUG 25936 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:55:28.736-06:00 DEBUG 25936 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:55:28.821-06:00  INFO 25936 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:55:28.831-06:00 DEBUG 25936 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:55:28.831-06:00 DEBUG 25936 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -29734,7 +29734,7 @@ Unconditional classes:
 2024-09-23T18:56:21.750-06:00 DEBUG 15312 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:56:21.819-06:00 DEBUG 15312 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:56:21.889-06:00  INFO 15312 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:56:21.899-06:00 DEBUG 15312 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:56:21.899-06:00 DEBUG 15312 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -31149,7 +31149,7 @@ Unconditional classes:
 2024-09-23T18:56:28.882-06:00 DEBUG 2252 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:56:28.972-06:00 DEBUG 2252 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:56:29.070-06:00  INFO 2252 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:56:29.082-06:00 DEBUG 2252 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:56:29.082-06:00 DEBUG 2252 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -32564,7 +32564,7 @@ Unconditional classes:
 2024-09-23T18:56:35.765-06:00 DEBUG 4720 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:56:35.852-06:00 DEBUG 4720 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:56:35.956-06:00  INFO 4720 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:56:35.968-06:00 DEBUG 4720 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:56:35.968-06:00 DEBUG 4720 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -33995,7 +33995,7 @@ Unconditional classes:
 2024-09-23T18:59:44.289-06:00 DEBUG 19164 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T18:59:44.356-06:00 DEBUG 19164 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T18:59:44.425-06:00  INFO 19164 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T18:59:44.435-06:00 DEBUG 19164 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T18:59:44.435-06:00 DEBUG 19164 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -35439,7 +35439,7 @@ Unconditional classes:
 2024-09-23T19:04:59.504-06:00 DEBUG 11580 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:04:59.578-06:00 DEBUG 11580 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:04:59.657-06:00  INFO 11580 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:04:59.667-06:00 DEBUG 11580 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:04:59.667-06:00 DEBUG 11580 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -36868,7 +36868,7 @@ Unconditional classes:
 2024-09-23T19:07:05.095-06:00 DEBUG 18720 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:07:05.166-06:00 DEBUG 18720 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:07:05.244-06:00  INFO 18720 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:07:05.255-06:00 DEBUG 18720 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:07:05.255-06:00 DEBUG 18720 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -38284,7 +38284,7 @@ Unconditional classes:
 2024-09-23T19:09:50.959-06:00 DEBUG 19940 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:09:51.161-06:00 DEBUG 19940 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:09:51.291-06:00  INFO 19940 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:09:51.302-06:00 DEBUG 19940 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:09:51.302-06:00 DEBUG 19940 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -39699,7 +39699,7 @@ Unconditional classes:
 2024-09-23T19:09:59.090-06:00 DEBUG 13360 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:09:59.156-06:00 DEBUG 13360 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:09:59.231-06:00  INFO 13360 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:09:59.241-06:00 DEBUG 13360 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:09:59.241-06:00 DEBUG 13360 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -41128,7 +41128,7 @@ Unconditional classes:
 2024-09-23T19:11:55.375-06:00 DEBUG 15416 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:11:55.443-06:00 DEBUG 15416 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:11:55.518-06:00  INFO 15416 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:11:55.528-06:00 DEBUG 15416 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:11:55.528-06:00 DEBUG 15416 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -42586,7 +42586,7 @@ Unconditional classes:
 2024-09-23T19:25:37.438-06:00 DEBUG 7920 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:25:37.548-06:00 DEBUG 7920 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:25:37.651-06:00  INFO 7920 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:25:37.664-06:00 DEBUG 7920 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:25:37.664-06:00 DEBUG 7920 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
@@ -44001,7 +44001,7 @@ Unconditional classes:
 2024-09-23T19:25:44.580-06:00 DEBUG 10452 --- [Api_Restfull_Spring_boot] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
 2024-09-23T19:25:44.656-06:00 DEBUG 10452 --- [Api_Restfull_Spring_boot] [main] inMXBeanRegistrar$SpringApplicationAdmin : Application Admin MBean registered with name 'org.springframework.boot:type=Admin,name=SpringApplication'
 2024-09-23T19:25:44.739-06:00  INFO 10452 --- [Api_Restfull_Spring_boot] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-09-23T19:25:44.750-06:00 DEBUG 10452 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2024-09-23T19:25:44.750-06:00 DEBUG 10452 --- [Api_Restfull_Spring_boot] [main] .s.b.a.l.ConditionEvaluationReportLogger :
 
 
 ============================
