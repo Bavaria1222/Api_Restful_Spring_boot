@@ -46,6 +46,9 @@ public class PersonaController {
                 })
                 .map(ResponseEntity::ok)  // Devolver 200 OK si todo está bien
                 .orElseThrow(() -> new RuntimeException("Error interno al actualizar"));   // Para generar un error 500
+                // Cambiar por
+                // .orElseGet(() -> ResponseEntity.badRequest().build());
+                //Para obtener un bad request en caso de error al actualizar.
     }
 
     @DeleteMapping("/persona/{id}")
