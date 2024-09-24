@@ -36,7 +36,7 @@ public class LogProccesor {
 
         try (Stream<String> lines = Files.lines(path)) {
             return lines
-                    .filter(line -> line.contains("Api_Restfull_Spring_boot"))  // Filtra solo las líneas que contienen "Api_Restfull_Spring_boot"
+                    .filter(line -> line.contains("Api_Restfull_Spring_boot"))
                     .collect(Collectors.toList());
         } catch (IOException e) {
             e.printStackTrace();
@@ -51,14 +51,14 @@ public class LogProccesor {
                 .filter(line ->
                         (line.contains("DispatcherServlet") &&
                                 (line.matches(".*Completed 40[0-9].*") || line.contains("status 500")))  // Incluye errores 40x y 500
-                                || line.contains(": Application run failed")  // Condición para "Application run failed"
+                                || line.contains(": Application run failed")  // Condición
                 )
                 .collect(Collectors.toList());
     }
 
     private List<String> filterEnpointsInformation() {
         return logs.stream()
-                .filter(line -> line.contains("PersonaAspect") && line.trim().endsWith("ms"))  // Filtrar las líneas que contienen "PersonaAspect" y terminan con "ms"
+                .filter(line -> line.contains("PersonaAspect") && line.trim().endsWith("ms"))
                 .collect(Collectors.toList());
     }
 
@@ -87,7 +87,7 @@ public class LogProccesor {
     // Método para obtener el top 3 errores más frecuentes
     public List<Map.Entry<String, Long>> getErroresFrecuentes() {
         return getErrorReportByType().entrySet().stream()
-                .sorted(Map.Entry.<String, Long>comparingByValue(Comparator.reverseOrder()))
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))
                 .limit(3)
                 .collect(Collectors.toList());
     }
@@ -106,7 +106,7 @@ public class LogProccesor {
         return errorLogs.stream()
                 .map(line -> {
                     try {
-                        if (line.length() >= 29) {  // Asegurarse de que la línea tenga suficiente longitud para el timestamp
+                        if (line.length() >= 29) {
                             String timestamp = line.substring(0, 29);  // Capturar los primeros 29 caracteres del timestamp
                             OffsetDateTime dateTime = OffsetDateTime.parse(timestamp, formato);  // Analizar el timestamp
                             return String.format("%02d", dateTime.getHour());  // Extraer la hora en formato "00", "01", etc.
@@ -116,15 +116,15 @@ public class LogProccesor {
                     }
                     return null;  // Si hay un error o la línea no tiene el formato adecuado, devolver null
                 })
-                .filter(hour -> hour != null)  // Filtrar las líneas que no pudieron ser procesadas
+                .filter(Objects::nonNull)  // Filtrar las líneas que no pudieron ser procesadas
                 .collect(Collectors.groupingBy(hour -> hour, Collectors.counting()));  // Agrupar por hora y contar los errores
     }
 
     public Map<String, String> getHoraPicoConErrores() {
         // Encuentra la hora con más errores
         Map.Entry<String, Long> peakHourEntry = agruparErroresPorHora().entrySet().stream()
-                .max(Map.Entry.<String, Long>comparingByValue())  // Encuentra la entrada con la mayor cantidad de errores
-                .orElse(null);  // Si no hay errores, devuelve null
+                .max(Map.Entry.comparingByValue())  // Encuentra la entrada con la mayor cantidad de errores
+                .orElse(null);  //
 
         // Verifica si se encontró una hora pico
         if (peakHourEntry != null) {
@@ -144,11 +144,11 @@ public class LogProccesor {
                 .filter(line -> line.contains("Tiempo de ejecución"))  // Filtra las líneas que contienen "Tiempo de ejecución"
                 .map(line -> {
                     try {
-                        // Buscar el índice donde aparece "Tiempo de ejecución:"
+
                         int startIndex = line.indexOf("Tiempo de ejecución:") + "Tiempo de ejecución:".length();
                         int endIndex = line.indexOf(" ms", startIndex);  // Buscar el índice donde termina la medida de tiempo en "ms"
 
-                        // Validar si los índices obtenidos son correctos
+
                         if (startIndex > 0 && endIndex > startIndex) {
                             // Extraer la subcadena que contiene el número del tiempo
                             String tiempoStr = line.substring(startIndex, endIndex).trim();
@@ -159,7 +159,7 @@ public class LogProccesor {
                     } catch (Exception e) {
                         System.err.println("Error al procesar la línea: " + line + " - " + e.getMessage());
                     }
-                    return null;  // Si no se puede extraer el tiempo, devolver null
+                    return null;
                 })
                 .filter(Objects::nonNull)  // Filtrar los valores nulos
                 .collect(Collectors.toList());  // Devolver la lista de tiempos de respuesta
@@ -171,7 +171,7 @@ public class LogProccesor {
         List<Long> tiempos = getTiemposDeRespuestaEnpoints();
 
         // Ordenar los tiempos
-        List<Long> tiemposOrdenados = tiempos.stream().sorted().collect(Collectors.toList());
+        List<Long> tiemposOrdenados = tiempos.stream().sorted().toList();
 
         // Calcular el promedio
         double promedio = tiempos.stream().mapToLong(val -> val).average().orElse(0.0);
@@ -202,7 +202,6 @@ public class LogProccesor {
     }
 
     // Distribución de tiempos de respuesta por endpoint
-    // Distribución de tiempos de respuesta por endpoint
     public Map<String, List<Long>> getTiemposDeRespuestaPorEndpoint() {
         return enpointsInformation.stream()
                 .map(line -> {
@@ -225,9 +224,9 @@ public class LogProccesor {
                     }
                     return null;
                 })
-                .filter(Objects::nonNull)  // Filtrar los valores nulos
+                .filter(Objects::nonNull)
                 .collect(Collectors.groupingBy(
-                        Map.Entry::getKey,  // Agrupar por el nombre del método (endpoint)
+                        Map.Entry::getKey,  // Agrupar
                         Collectors.mapping(Map.Entry::getValue, Collectors.toList())  // Crear una lista de los tiempos de respuesta
                 ));
     }
@@ -277,19 +276,19 @@ public class LogProccesor {
                 .collect(Collectors.toList());
     }
 
-    public void generarReporteSolicitudesLentas() {
-        long umbral = 500;  // Definir el umbral, por ejemplo, 500 ms
-
-        List<Map.Entry<String, Long>> solicitudesLentas = detectarSolicitudesLentas(umbral);
-
-        if (solicitudesLentas.isEmpty()) {
-            System.out.println("No se encontraron solicitudes lentas.");
-        } else {
-            System.out.println("Solicitudes lentas (superiores a " + umbral + " ms):");
-            solicitudesLentas.forEach(entry ->
-                    System.out.println("Endpoint: " + entry.getKey() + " - Tiempo: " + entry.getValue() + " ms"));
-        }
-    }
+//    public void generarReporteSolicitudesLentas() {
+//        long umbral = 500;  // Definir el umbral, por ejemplo, 500 ms
+//
+//        List<Map.Entry<String, Long>> solicitudesLentas = detectarSolicitudesLentas(umbral);
+//
+//        if (solicitudesLentas.isEmpty()) {
+//            System.out.println("No se encontraron solicitudes lentas.");
+//        } else {
+//            System.out.println("Solicitudes lentas (superiores a " + umbral + " ms):");
+//            solicitudesLentas.forEach(entry ->
+//                    System.out.println("Endpoint: " + entry.getKey() + " - Tiempo: " + entry.getValue() + " ms"));
+//        }
+//    }
 
     // 3. Reporte de Uso de Endpoints (respuesta en json)
     public List<Map.Entry<String, Long>> getTop3EndpointsMasUtilizados() {
@@ -298,7 +297,7 @@ public class LogProccesor {
                 .map(this::extraerNombreEndpoint)  // Extraer el nombre del endpoint
                 .collect(Collectors.groupingBy(endpoint -> endpoint, Collectors.counting()))  // Agrupar por nombre de endpoint y contar ocurrencias
                 .entrySet().stream()
-                .sorted(Map.Entry.<String, Long>comparingByValue(Comparator.reverseOrder()))  // Ordenar por cantidad de usos (de mayor a menor)
+                .sorted(Map.Entry.comparingByValue(Comparator.reverseOrder()))  // Ordenar por cantidad de usos (de mayor a menor)
                 .limit(3)  // Limitar a los 3 más utilizados
                 .collect(Collectors.toList());
     }
@@ -311,7 +310,7 @@ public class LogProccesor {
                 .map(this::extraerNombreEndpoint)  // Extraer el nombre del endpoint
                 .collect(Collectors.groupingBy(endpoint -> endpoint, Collectors.counting()))  // Agrupar por nombre de endpoint y contar ocurrencias
                 .entrySet().stream()
-                .sorted(Map.Entry.<String, Long>comparingByValue())  // Ordenar por cantidad de usos (de menor a mayor)
+                .sorted(Map.Entry.comparingByValue())  // Ordenar por cantidad de usos (de menor a mayor)
                 .limit(3)  // Limitar a los 3 menos utilizados
                 .collect(Collectors.toList());
     }
@@ -324,8 +323,8 @@ public class LogProccesor {
                 .collect(Collectors.groupingBy(
                         this::extraerNombreEndpoint,  // Agrupa por nombre del endpoint
                         Collectors.groupingBy(
-                                this::extraerMetodoHTTP,  // Agrupa dentro de cada endpoint por el método HTTP
-                                Collectors.counting()  // Cuenta la cantidad de peticiones por método
+                                this::extraerMetodoHTTP,  // Agrupa dentro de cada endpoint por el metodo HTTP
+                                Collectors.counting()  // Cuenta la cantidad de peticiones por metodo
                         )
                 ));
     }
@@ -350,7 +349,7 @@ public class LogProccesor {
         // Caso 2: Buscar otro formato de línea si "Enpoint_ejecutado:" no está presente
         if (lineaLog.contains("El método")) {
             int startIndex = lineaLog.indexOf("El método") + "El método".length();
-            int endIndex = lineaLog.indexOf(" ", startIndex);  // Extrae el nombre del método
+            int endIndex = lineaLog.indexOf(" ", startIndex);  // Extrae el nombre del metodo
 
             if (endIndex == -1) {
                 endIndex = lineaLog.length();
@@ -361,7 +360,7 @@ public class LogProccesor {
             return nombreMetodo;
         }
 
-        // Si la línea no contiene información de endpoint o método, marcar como "Desconocido"
+        // Si la línea no contiene información de endpoint o metodo, marcar como "Desconocido"
         System.out.println("No se pudo extraer el nombre del endpoint o método, devolviendo 'Desconocido'");  // Depuración
         return "Desconocido";
     }
@@ -390,6 +389,54 @@ public class LogProccesor {
         System.out.println("No se pudo extraer el método HTTP, devolviendo 'UNKNOWN'");  // Depuración
         return "UNKNOWN";
     }
+
+    public List<String> filtrarEventosCriticos() {
+        return logs.stream()
+                .filter(line -> line.contains(" ERROR ") || line.contains(" CRITICAL "))  // Filtrar por " ERROR " o " CRITICAL "
+                .collect(Collectors.toList());  // Devolver la lista de eventos críticos
+    }
+
+
+    public Map<String, Long> generarReporteCantidadEventosCriticos() {
+        long cantidadEventosCriticos = filtrarEventosCriticos().size();
+
+        // Crear el mapa con la cantidad de eventos críticos
+        Map<String, Long> response = new HashMap<>();
+        response.put("Cantidad de eventos críticos", cantidadEventosCriticos);
+
+        return response;
+    }
+
+    public Map<String, Object> generarResumenTotal() {
+        Map<String, Object> resumen = new HashMap<>();
+
+        // Total de peticiones procesadas (suponiendo que las peticiones están registradas en enpointsInformation)
+        long totalPeticiones = enpointsInformation.size();
+        resumen.put("Total de peticiones procesadas", totalPeticiones);
+
+        // Total de errores (suponiendo que los errores están registrados en errorLogs)
+        long totalErrores = errorLogs.size();
+        resumen.put("Total de errores", totalErrores);
+
+        // Resumen de tiempos de respuesta
+        List<Long> tiempos = getTiemposDeRespuestaEnpoints();
+
+        // Calcular el promedio, mínimo, máximo de los tiempos de respuesta
+        double promedio = tiempos.stream().mapToLong(Long::longValue).average().orElse(0.0);
+        long minimo = tiempos.stream().mapToLong(Long::longValue).min().orElse(0L);
+        long maximo = tiempos.stream().mapToLong(Long::longValue).max().orElse(0L);
+
+        // Añadir los tiempos de respuesta al resumen
+        Map<String, Object> resumenTiempos = new HashMap<>();
+        resumenTiempos.put("Promedio", promedio + " ms");
+        resumenTiempos.put("Mínimo", minimo + " ms");
+        resumenTiempos.put("Máximo", maximo + " ms");
+
+        resumen.put("Tiempos de respuesta", resumenTiempos);
+
+        return resumen;
+    }
+
 
 
 

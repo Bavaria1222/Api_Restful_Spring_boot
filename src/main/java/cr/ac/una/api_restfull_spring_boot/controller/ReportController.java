@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import java.util.List;
 import java.util.Map;
 
@@ -82,9 +83,28 @@ public class ReportController {
         return logProccesor.getTop3EndpointsMenosUtilizados();  // Devuelve el top 3 de endpoints menos utilizados
     }
 
-    // Endpoint para obtener el conteo de peticiones por endpoint y por método HTTP (GET, POST, PUT, DELETE)
+    // Endpoint para obtener el conteo de peticiones por endpoint y por metodo HTTP (GET, POST, PUT, DELETE)
     @GetMapping("/enpoint/Contador")
     public Map<String, Map<String, Long>> getConteoPeticionesPorMetodo() {
-        return logProccesor.conteoPeticionesPorEndpointYMetodo();  // Devuelve el conteo de peticiones por endpoint y por método HTTP
+        return logProccesor.conteoPeticionesPorEndpointYMetodo();  // Devuelve el conteo de peticiones por endpoint y por metodo HTTP
     }
+
+
+    @GetMapping("/critico/eventos-criticos")
+    public ResponseEntity<List<String>> getEventosCriticos() {
+        List<String> eventosCriticos = logProccesor.filtrarEventosCriticos();
+        return ResponseEntity.ok(eventosCriticos);
+    }
+    @GetMapping("/critico/cantidad-eventos-criticos")
+    public ResponseEntity<Map<String, Long>> getCantidadEventosCriticos() {
+        Map<String, Long> reporteEventosCriticos = logProccesor.generarReporteCantidadEventosCriticos();
+        return ResponseEntity.ok(reporteEventosCriticos);
+    }
+    @GetMapping("/resumen-total")
+    public ResponseEntity<Map<String, Object>> getResumenTotal() {
+        Map<String, Object> resumenTotal = logProccesor.generarResumenTotal();
+        return ResponseEntity.ok(resumenTotal);
+    }
+
+
 }

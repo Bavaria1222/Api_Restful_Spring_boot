@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import java.util.Objects;
 import java.util.logging.Logger;
 
 @Aspect
@@ -26,17 +27,17 @@ public class PersonaAspect {
         // Obtener el tiempo inicial en milisegundos
         long start = System.currentTimeMillis();
 
-        // Obtener el método HTTP actual
-        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        // Obtener el metodo HTTP actual
+        HttpServletRequest request = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
         String metodoHTTP = request.getMethod();  // Obtener el método HTTP (GET, POST, PUT, DELETE)
 
-        // Ejecutar el método original
+        // Ejecutar el metodo original
         Object proceed = joinPoint.proceed();
 
         // Calcular el tiempo de ejecución
         long executionTime = System.currentTimeMillis() - start;
 
-        // Registrar el método HTTP, el endpoint y el tiempo de ejecución en los logs
+        // Registrar el metodo HTTP, el endpoint y el tiempo de ejecución en los logs
         logger.info("Enpoint_ejecutado: " + joinPoint.getSignature().getName() + " - Método HTTP: " + metodoHTTP + " - Tiempo de ejecución: " + executionTime + " ms");
 
         return proceed;
